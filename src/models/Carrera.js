@@ -1,3 +1,4 @@
+//si
 const { DataTypes } = require('sequelize');
 const db = require('../db/config');
 
@@ -17,3 +18,5 @@ const Carrera = db.define('Carrera', {
 });
 
 module.exports = Carrera;
+
+

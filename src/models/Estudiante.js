@@ -18,7 +18,7 @@ const Estudiante = db.define('Estudiante', {
     type: DataTypes.STRING,
     allowNull: false
   },
-  IDUniversidad: { //Llave foránea
+  IDUniversidad: { // Llave foránea
     type: DataTypes.INTEGER,
     allowNull: true,
     references: {
@@ -26,7 +26,7 @@ const Estudiante = db.define('Estudiante', {
       key: 'IDUniversidad'
     }
   },
-  IDCarrera: { //Llave foránea
+  IDCarrera: { // Llave foránea
     type: DataTypes.INTEGER,
     allowNull: true,
     references: {
@@ -54,7 +54,7 @@ const Estudiante = db.define('Estudiante', {
     type: DataTypes.STRING(20),
     allowNull: true
   },
-  TipoDocumento: { //Llave foránea
+  TipoDocumentoId: { // Llave foránea
     type: DataTypes.INTEGER,
     allowNull: true,
     references: {
@@ -74,6 +74,6 @@ const Estudiante = db.define('Estudiante', {
 // Define las asociaciones
 Estudiante.belongsTo(Universidad, { foreignKey: 'IDUniversidad' });
 Estudiante.belongsTo(Carrera, { foreignKey: 'IDCarrera' });
-Estudiante.belongsTo(TipoDocumento, { foreignKey: 'TipoDocumento' });
+Estudiante.belongsTo(TipoDocumento, { foreignKey: 'TipoDocumentoId' });
 
 module.exports = Estudiante;
