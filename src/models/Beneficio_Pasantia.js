@@ -1,45 +1,28 @@
 const { DataTypes } = require('sequelize');
 const db = require('../db/config');
-const Estudiante = require('./Estudiante'); // Importa el modelo Estudiante
+const Beneficios = require('./Beneficios'); // Importa el modelo Beneficios
 const Pasantia = require('./Pasantia'); // Importa el modelo Pasantia
 
-const Aplicacion = db.define('Aplicacion', {
-  IDAplicacion: {
+const BeneficioPasantia = db.define('Beneficio_Pasantia', {
+  IDBeneficios: {
     type: DataTypes.INTEGER,
     primaryKey: true,
-    autoIncrement: true
-  },
-  IDEstudiante: { // Llave foránea
-    type: DataTypes.INTEGER,
-    allowNull: false,
     references: {
-      model: Estudiante,
-      key: 'IDEstudiante'
+      model: Beneficios,
+      key: 'IDBeneficios'
     }
   },
-  IDPasantia: { // Llave foránea
+  IDPasantia: {
     type: DataTypes.INTEGER,
-    allowNull: false,
+    primaryKey: true,
     references: {
       model: Pasantia,
       key: 'IDPasantia'
     }
-  },
-  EstadoAplicacion: {
-    type: DataTypes.STRING,
-    allowNull: true
-  },
-  FechaAplicacion: {
-    type: DataTypes.DATE,
-    allowNull: true
   }
 }, {
-  tableName: 'aplicacion', // Especifica el nombre correcto de la tabla
+  tableName: 'beneficio_pasantia', // Especifica el nombre correcto de la tabla
   timestamps: false // Desactiva los campos de timestamps
 });
 
-// Define las asociaciones
-Aplicacion.belongsTo(Estudiante, { foreignKey: 'IDEstudiante' });
-Aplicacion.belongsTo(Pasantia, { foreignKey: 'IDPasantia' });
-
-module.exports = Aplicacion;
+module.exports = BeneficioPasantia;
