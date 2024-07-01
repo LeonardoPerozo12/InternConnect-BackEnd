@@ -9,7 +9,7 @@ const Carrera = db.define('Carrera', {
   },
   Nombre: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false, 
   }
 }, {
   tableName: 'carrera', // Especifica el nombre correcto de la tabla
