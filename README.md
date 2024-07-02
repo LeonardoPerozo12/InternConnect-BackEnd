@@ -25,13 +25,13 @@ InternConnect es una aplicación web para la gestión de prácticas profesionale
 4.Sincronizar la base de datos
  node src/db/sync-db.js
 
-###Modelos
-  ##Aplicacion: Representa las aplicaciones a pasantías realizadas por los estudiantes.
-  ##Beneficios: Detalla los beneficios ofrecidos por las pasantías.
-  ##Beneficios_Pasantia: Relación muchos a muchos entre Beneficios y Pasantia.
-  ##Carrera: Contiene las diferentes carreras ofrecidas por las universidades.
-  ##Empresa: Contiene la información de las empresas registradas.
-  ##Estudiante: Contiene la información de los estudiantes.
-  ##Pasantia: Contiene la información de las pasantías ofrecidas por las empresas.
-  ##TipoDocumento: Contiene los diferentes tipos de documentos que pueden tener los estudiantes.
-  ##Universidad: Contiene la información de las universidades.
+### Modelos
+  ## Aplicacion: Representa las aplicaciones a pasantías realizadas por los estudiantes.
+  ## Beneficios: Detalla los beneficios ofrecidos por las pasantías.
+  ## Beneficios_Pasantia: Relación muchos a muchos entre Beneficios y Pasantia.
+  ## Carrera: Contiene las diferentes carreras ofrecidas por las universidades.
+  ## Empresa: Contiene la información de las empresas registradas.
+  ## Estudiante: Contiene la información de los estudiantes.
+  ## Pasantia: Contiene la información de las pasantías ofrecidas por las empresas.
+  ## TipoDocumento: Contiene los diferentes tipos de documentos que pueden tener los estudiantes.
+  ## Universidad: Contiene la información de las universidades.
