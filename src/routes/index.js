@@ -1,16 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const Carrera = require('/Users/leona/InternConnect-BackEnd/src/models/Carrera.js'); // Asegúrate de que esta ruta sea correcta
+const authRoutes = require('./authRoutes'); // Importa las rutas de autenticación desde authRoutes.js
 
-router.route('/')
-  .get(async (req, res) => {
-    try {
-      const carrera = await Carrera.findAll(); 
-      res.json(carrera);
-    } catch (err) {
-      console.error(err);
-      res.status(500).json({ error: 'Error al obtener las carreras' });
-    }
-  });
+// Rutas de autenticación
+router.use('/auth', authRoutes);
 
 module.exports = router;
